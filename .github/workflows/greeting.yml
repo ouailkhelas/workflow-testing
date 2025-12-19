@@ -1,0 +1,29 @@
+name: Test Custom Greeting Action
+
+on: [push]
+
+jobs:
+  greet-users:
+    runs-on: ubuntu-latest
+    steps:
+    # Greet in French
+    - name: Greet Ouail in French
+      uses: ouailkhelas/greeting-action@main
+      with:
+        name: "Karim"
+        language: "fr"
+    
+    # Greet in Arabic
+    - name: Greet Ahmed in Arabic
+      uses: ouailkhelas/greeting-action@main
+      with:
+        name: "أحمد"
+        language: "ar"
+    
+    # Greet in English
+    - name: Greet John in English
+      uses: ouailkhelas/greeting-action@main
+      with:
+        name: "John"
+        language: "en"
+    
