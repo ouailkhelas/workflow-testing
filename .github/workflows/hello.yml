@@ -1,0 +1,10 @@
+name: Mon Premier Workflow
+
+on: [push]
+
+jobs:
+  dire-bonjour:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Afficher bonjour
+      run: echo "Hello World from GitHub Actions!"
