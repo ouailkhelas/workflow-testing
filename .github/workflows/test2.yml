@@ -1,0 +1,17 @@
+name: Environment Variables Exercise
+
+on: [push]
+
+env:
+  MY_NAME: "khelas"
+  MY_CITY: "constantine"
+
+jobs:
+  display-info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Display personal information
+      run: |
+        echo "My name is $MY_NAME"
+        echo "I live in $MY_CITY"
+        echo "Current date: $(date)"

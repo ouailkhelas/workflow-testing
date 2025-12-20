@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Tester
+    - name: Test
       run: echo "Tests in progress..."
   
   deploy-staging:

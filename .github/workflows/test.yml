@@ -1,4 +1,4 @@
-name: Tests Automatiques
+name: Automated Tests
 
 on: [push, pull_request]
 
@@ -6,16 +6,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Récupérer le code
+    - name: Checkout code
       uses: actions/checkout@v3
     
-    - name: Installer Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
     
-    - name: Installer les dépendances
+    - name: Install dependencies
       run: npm install
     
-    - name: Lancer les tests
+    - name: Run tests
       run: npm test
